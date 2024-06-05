@@ -5,6 +5,7 @@ import './Hero.css'
 import profileimg from '../assets/profile-picc.png'
 import linkedin from '../assets/linkedin-svg.svg'
 import github from '../assets/github-svg.svg'
+//import resume from '../assets/BILHA_MWENGI_CV.pdf'
 
 export default function Hero() {
   return (

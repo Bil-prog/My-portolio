@@ -27,6 +27,9 @@
     border: none;
     margin-top: 10px;
 }
+.resume-btn:hover{
+    transform: scale(1.05);
+}
 .hero .tag-line{
     font-size: 20px;
 }
@@ -36,6 +39,11 @@
 .socials img{
     width: 36px;
     margin: 10px 8px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.socials img:hover{
+    transform: translateY(-10px);
 }
 .socials .linkedin{
     width: 34px;
