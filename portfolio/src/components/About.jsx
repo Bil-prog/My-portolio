@@ -13,7 +13,7 @@ export default function About() {
         <div className="details-container">
             <div className="text-container">
                 <h1 className="title">About Me</h1>
-                    <p>
+                    <p className='abt-description'>
                         With a background spanning web development, data analysis and cybersecurity, I bring a diverse skill set tailored to meet the evolving demands of the digital landscape. I specialize in crafting visually appealing and user-centric interfaces while ensuring seamless functionality. My expertise in cybersecurity encompasses reconnaissance, vulnerability analysis, and penetration testing, contributing to robust threat mitigation strategies. I am driven by a passion for innovation and continuous learning, and I am excited to leverage my skills to make meaningful contributions in the ever-evolving world of technology. 
                     </p>
             </div>

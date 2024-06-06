@@ -1,7 +1,7 @@
 .about{
     padding-top: 4vh;
     height: 96vh;
-    margin: 0 10rem;
+    /* margin: 0 10rem; */
     box-sizing: border-box;
     min-height: fit-content;
     position: relative;
@@ -19,9 +19,12 @@
     object-fit: contain;
     border-radius: 20%;
 }
+.abt-description{
+    font-size: 17px;
+}
 .details-container{
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
     margin-top: 2rem;
 }
 @media screen and (max-width: 1400px){
@@ -41,14 +44,16 @@
         flex-direction: column;
     }
     .abt-pic-container{
-        margin-top: 8rem;
-        margin-bottom: 0;
+        /* margin-top: 8rem;
+        margin-bottom: 0; */
+        display: none;
     }
 }
 @media screen and (max-width: 600px) {
     .about{
         margin-top: 5rem;
         height: 70vh;
+        margin-bottom: 8rem;
     }
     .abt-pic-container{
         display: none;
