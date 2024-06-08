@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import './Projects.css';
-import ecommerceImage from '../assets/ecommerce.png';
-import ngoImage from '../assets/ngo.webp';
-import gymImage from '../assets/gym.jpg';
+import '../CSS/Projects.css';
+import ecommerceImage from '../../assets/ecommerce.png';
+import ngoImage from '../../assets/ngo.webp';
+import gymImage from '../../assets/gym.jpg';
 
 const projects = [
   {
-    title: "E-commerce Website",
+    title: "E-commerce Website", 
     imgSrc: ecommerceImage,
     githubLink: "https://github.com/Bil-prog/ecoerigreen",
     liveDemoLink: "https://ecoerigreen.co.ke/"
@@ -32,24 +32,24 @@ const ProjectCard = ({ title, imgSrc, githubLink, liveDemoLink }) => (
     <div className="img-container">
       <img src={imgSrc} alt={`${title} image`} className="project-img" />
     </div>
-    <h2 className="project-title">{title}</h2>
+    <h2 className="project-title" style={{color: "#222"}}>{title}</h2>
     <div className="btn-container">
       <button className="project-btn" onClick={() => window.open(githubLink, "_blank", "noopener,noreferrer")}>Github</button>
-      <button className="project-btn" onClick={() => window.open(liveDemoLink, "_blank", "noopener,noreferrer")}>Live Demo</button>
+      <button className="project-btn" onClick={() => window.open(liveDemoLink, "_blank", "noopener,noreferrer")}>Demo</button>
     </div>
   </div>
-);
+); 
 
 export default function Projects() {
   return (
-    <div className="project-cards-container">
+    <div className="project-cards-container" id='projects'>
       <p style={{ textAlign: 'center' }} className="explore">Browse some of my</p>
       <h1 className="title" style={{ textAlign: 'center', marginBottom: '2rem' }}>Projects</h1>
       <div className="project-article">
         {projects.map((project, index) => (
-          <ProjectCard
+          <ProjectCard 
             key={index}
-            title={project.title}
+            title={project.title} 
             imgSrc={project.imgSrc}
             githubLink={project.githubLink}
             liveDemoLink={project.liveDemoLink}

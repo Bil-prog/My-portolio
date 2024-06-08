@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import './Tabs.css'
+import '../CSS/Tabs.css'
 
 const tabs = [
   { name: 'skills', label: 'Skills', content: (
@@ -33,7 +33,7 @@ const Tabs = () => {
 
   return (
     <div className="tab-container">
-      <div className="tab-titles">
+      <div className="tab-titles" style={{color: "#222"}}>
         {tabs.map(tab => (
           <p 
             key={tab.name} 
@@ -42,7 +42,7 @@ const Tabs = () => {
           >
             {tab.label}
           </p>
-        ))}
+        ))} 
       </div>
       <div className="tab-contents-container">
         {tabs.map(tab => (
@@ -50,6 +50,7 @@ const Tabs = () => {
             key={tab.name} 
             className={`tab-contents ${activeTab === tab.name ? 'active-tab' : ''}`}
             id={tab.name}
+            style={{color: "#222"}}
           >
             {tab.content}
           </div>

@@ -1,7 +1,6 @@
 .about{
     padding-top: 4vh;
     height: 96vh;
-    /* margin: 0 10rem; */
     box-sizing: border-box;
     min-height: fit-content;
     position: relative;
@@ -33,27 +32,21 @@
         margin: 6% 0% 5% 5%;
         height: 80vh;
     }
-    /* .abt-pic{
-        width: 300px;
-        height: 300px;
-        margin: 0 auto 2rem;
-    } */
 }
 @media screen and (max-width: 900px) {
     .about{
         flex-direction: column;
     }
     .abt-pic-container{
-        /* margin-top: 8rem;
-        margin-bottom: 0; */
+        
         display: none;
     }
 }
 @media screen and (max-width: 600px) {
     .about{
-        margin-top: 5rem;
         height: 70vh;
-        margin-bottom: 8rem;
+        margin-bottom: 9rem;
+        padding: 2%;
     }
     .abt-pic-container{
         display: none;

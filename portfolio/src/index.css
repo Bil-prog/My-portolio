@@ -12,4 +12,9 @@ body{
 }
 .title {
     font-size: 3rem;
+    color: #222;
 }
+.text{
+    color: #222;
+}
+

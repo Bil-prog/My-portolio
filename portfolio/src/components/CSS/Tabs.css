@@ -29,7 +29,7 @@
   }
   .tab-contents ul li span {
     /* color: #fb6f92; */
-    background: linear-gradient(101deg, rgba(63,94,251,0.9798183922006303) 0%, rgba(252,70,107,1) 100%);
+    background: linear-gradient(101deg, rgba(63,94,251,0.9798183922006303) 10%, rgba(252,70,107,1) 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     font-size: 16px;
