@@ -10,7 +10,7 @@ export default function About() {
         <div className="abt-pic-container">
             <img src={abtImg} alt="about image" className='abt-pic'/>
         </div>
-        <div className="details-container">
+        <div className="details-abt-container">
             <div className="text-container">
                 <h1 className="title">About Me</h1>
                     <p className='abt-description'>

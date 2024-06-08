@@ -34,11 +34,13 @@ const SkillCard = ({ category, details }) => (
         <div className="article-container">
         {details.map((detail, index) => (
             <article key={index}>
-              <img src={sun} alt="sun-emoji"  className="icon" />
-            <div>
-                <h3 className='detailName'>{detail.name}</h3>
-                <p className='detailLevel'>{detail.level}</p>
-            </div>
+              <div className="article-content">
+                <img src={sun} alt="sun-emoji"  className="icon" />
+                <div>
+                    <h3 className='detailName'>{detail.name}</h3>
+                    <p className='detailLevel'>{detail.level}</p>
+                </div>
+              </div>
             </article>
         ))}
         </div>
@@ -46,7 +48,7 @@ const SkillCard = ({ category, details }) => (
 );
 
 const Expertise = () => (
-  <div style={{marginTop: '1rem', marginBottom: '2rem', padding: '5%'}} className='expertise-cards'>
+  <div className='expertise-cards'>
     <p style={{textAlign: 'center'}} className='explore'>Explore my</p>
     <h1 className='title' style={{textAlign: 'center'}}>Expertise</h1>
     <div className="expertise-container">

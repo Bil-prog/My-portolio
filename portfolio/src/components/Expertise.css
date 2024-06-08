@@ -1,93 +1,80 @@
-.expertise-container{
+/* Removed unnecessary class names and adjusted existing styles */
+
+.expertise-cards {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 5%; /* Inherit the padding from the previous component */
+    text-align: center;
+  }
+  
+  .expertise-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
-}
-.cards{
-    padding: 1.3rem;
-    flex: 1;
+    justify-content: center;
+  }
+  
+  .cards {
+    padding: 2rem; /* Increased padding for larger cards */
     background: white;
     border-radius: 2rem;
-    /* width: 5rem; */
-    height: 18rem;
-    margin: 20px 0;
     text-align: center;
-    /* background-image: linear-gradient(0deg, #ffc2d1, #fb6f92); */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.article-container {
+    max-width: 350px; /* Adjusted max-width for larger cards */
+    flex: 1 1 350px; /* Added flex properties for responsiveness */
+    margin: 20px 0;
+  }
+  
+  .article-container {
     display: flex;
-    text-align: initial;
     flex-wrap: wrap;
-    flex-direction: row;
     gap: 2rem;
-    justify-content: space-around;
-}
-article {
+    justify-content: center;
+    margin-top: 1rem; /* Added margin top for spacing */
+  }
+  
+  article {
     display: flex;
-    width: 10rem;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
-}
-.experience-sub-title {
-    color: rgb (85, 85, 85);
+  }
+  .article-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .experience-sub-title {
     font-weight: 600;
     font-size: 1.75rem;
-    margin-bottom: 2rem;
-}
-article .icon {
-    height: 2rem;
-}
-.detailName {
-    margin: 0;
-    font-size: 19px;
-}
+    margin-bottom: 1rem; /* Adjusted margin for better spacing */
+  }
   
-.detailLevel{
+  .icon {
+    height: 2rem;
+  }
+  
+  .detailName {
     margin: 0;
-    font-size: 14px;
+    font-size: 1rem; /* Adjusted font size for readability */
+  }
+  
+  .detailLevel {
+    margin: 0;
+    font-size: 0.875rem; /* Adjusted font size for readability */
     color: gray;
-}
-@media screen and (max-width: 936px) {
-    .expertise-container{
-        /* flex-direction: column; */
-        flex-wrap: wrap;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .expertise-container {
+      flex-direction: column;
+      align-items: center;
     }
-}
-@media screen and (max-width: 899px ) {
-    .article-container{
-        flex-wrap: wrap;
+    
+    .cards {
+      max-width: 100%; /* Adjusted max-width for smaller screens */
     }
-}
-@media screen and (max-width: 500px){
-    .article-container{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .expertise-cards{
-        margin-top: 8px;
-    }
-    .expertise-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .cards{
-        padding: 1rem;
-        height: 26rem;
-        width: 20rem;
-
-    }
-    .detailName {
-        font-size: 17px;
-    }
-      
-    .detailLevel{
-        font-size: 12px;
-    }
-    .explore{
-        margin-top: 7rem;
-    }
-}
+  }
   

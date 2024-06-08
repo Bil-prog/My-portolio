@@ -1,0 +1,85 @@
+.project-cards-container {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 5%;
+    text-align: center;
+  }
+  
+  .project-article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .img-container {
+    width: 100%;
+    padding-top: 60%; /* Adjust the aspect ratio */
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+  
+  .project-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 1rem;
+  }
+  
+  .proj-details-container {
+    padding: 2rem; /* Increased padding for larger cards */
+    background: white;
+    border-radius: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 350px; /* Increased max-width for larger cards */
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem; /* Increased margin top for button spacing */
+  }
+  
+  .project-btn {
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 300ms ease;
+    padding: 1rem 2rem; /* Increased padding for larger buttons */
+    border-radius: 1rem;
+    width: 10rem; /* Increased width for larger buttons */
+    background: white;
+    border: #ff319f 0.1rem solid;
+  }
+  
+  .project-btn:hover {
+    background: #ff319f;
+    color: white;
+  }
+  .project-title{
+    margin-top: 1rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .project-article {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .proj-details-container {
+      max-width: 100%; /* Adjusted max-width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .project-article {
+      gap: 1.5rem; /* Adjusted gap for medium-sized screens */
+    }
+  }
+  
