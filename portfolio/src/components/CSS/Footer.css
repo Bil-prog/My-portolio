@@ -10,9 +10,6 @@
 .footer-bottom{
     margin-bottom: 50px;
 }
-.footer-bottom p{
-    color: #222;
-}
 .footer-logo{
     font-size: 2rem;
     background: linear-gradient(101deg, rgba(63,94,251,0.9798183922006303) 0%, rgba(252,70,107,1) 26%);

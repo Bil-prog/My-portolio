@@ -27,14 +27,14 @@ const skills = [
   }
 ];
 const SkillCard = ({ category, details }) => (
-  <div className="skill-card">
+  <div className="skill-card tile">
     <h2 className="skill-category">{category}</h2>
-    <div className="skills-list">
+    <div className="skills-list"> 
       {details.map((detail, index) => (
         <div key={index} className="skill-item">
           <img src={approval} alt="sunicon" className="skill-icon" />
           <div className="skill-info">
-            <h3 className="skill-name text">{detail.name}</h3>
+            <h3 className="skill-name">{detail.name}</h3>
             <p className="skill-level">{detail.level}</p>
           </div>
         </div>

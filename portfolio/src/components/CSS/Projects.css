@@ -8,7 +8,7 @@
 .project-article {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 2rem; 
   justify-content: center;
 }
 
@@ -55,7 +55,7 @@
   padding: 1rem 2rem; 
   border-radius: 1rem;
   width: 10rem; 
-  background: white;
+  background: var(--background-color);
   border: #3f5efb 0.1rem solid;
   color: #3f5efb;
   cursor: pointer;

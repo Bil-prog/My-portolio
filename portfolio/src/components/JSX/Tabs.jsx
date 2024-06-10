@@ -33,7 +33,7 @@ const Tabs = () => {
 
   return (
     <div className="tab-container">
-      <div className="tab-titles" style={{color: "#222"}}>
+      <div className="tab-titles text">
         {tabs.map(tab => (
           <p 
             key={tab.name} 
@@ -48,9 +48,8 @@ const Tabs = () => {
         {tabs.map(tab => (
           <div 
             key={tab.name} 
-            className={`tab-contents ${activeTab === tab.name ? 'active-tab' : ''}`}
+            className={`text tab-contents ${activeTab === tab.name ? 'active-tab' : ''}`}
             id={tab.name}
-            style={{color: "#222"}}
           >
             {tab.content}
           </div>

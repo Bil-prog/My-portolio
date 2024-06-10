@@ -1,13 +1,21 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
 import '../CSS/Navbar.css';
-import menuIcon from '../../assets/menu-icon.svg';
-import closeMenuIcon from '../../assets/close-menu.svg';
+import { useDarkMode } from './DarkModeContext'
+import moonIcon from '../../assets/moon.png'
+import sunIcon from '../../assets/sun.png'
+import menuIconLight from '../../assets/menu-icon.png';
+import menuIconDark from '../../assets/menu-dark-icon.png'
+import closeMenuIconLight from '../../assets/close-menu.png';
+import closeMenuIconDark from '../../assets/close-menu-dark.png'
+
 
 export default function Navbar() {
   const [activeIndex, setActiveIndex] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  //const [darkMode, setDarkMode] = useState(false);
+  const { darkMode, toggleDarkMode } = useDarkMode();
 
   const handleNavClick = (index, sectionId) => {
     setActiveIndex(index);
@@ -15,11 +23,11 @@ export default function Navbar() {
     closeMenu();
   };
 
-  const handleContactClick = () => {
-    setActiveIndex(null);
-    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-    closeMenu();
-  };
+  // const handleContactClick = () => {
+  //   setActiveIndex(null);
+  //   document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  //   closeMenu();
+  // };
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -39,12 +47,13 @@ export default function Navbar() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  const menuIcon = darkMode ? menuIconDark : menuIconLight;
+  const closeMenuIcon = darkMode ? closeMenuIconDark : closeMenuIconLight;
 
   return (
     <div className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <h4 className='logo'>Bilha<span>.</span></h4>
       <div className="menu-container">
-        {/* Toggle menu icon for smaller screens */}
         <img
           src={menuOpen ? closeMenuIcon : menuIcon}
           className='menu-icon'
@@ -52,26 +61,29 @@ export default function Navbar() {
           alt={menuOpen ? 'close menu icon' : 'menu icon'}
         />
         
-        {/* Navigation menu for larger screens */}
+        
         <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
-          {['Home', 'About', 'Expertise', 'Projects'].map((item, index) => (
+          {['Home', 'About', 'Expertise', 'Projects', 'Contact'].map((item, index) => (
             <li
               key={index}
-              className={activeIndex === index ? 'active' : ''}
+              className={`text ${activeIndex === index ? 'active' : ''}`}
               onClick={() => handleNavClick(index, item.toLowerCase())}
             >
               {item}
             </li>
           ))}
-          {window.innerWidth <= 768 && (
+          {/* {window.innerWidth <= 768 && (
             <li className="contact-hero-title" onClick={handleContactClick}>
             Contact Me
             </li>
-          )}
+          )} */}
           
         </ul>
       </div>
-      <div className="nav-btn" onClick={handleContactClick}>Contact Me</div>
+      {/* <div className="nav-btn" onClick={handleContactClick}>Contact Me</div> */}
+      <button className="dark-mode-toggle" onClick={toggleDarkMode}>
+          <img src={darkMode ? moonIcon : sunIcon} alt="Mode Icon" className='modeIcon'/>
+      </button>
     </div>
   );
-}
+} 
