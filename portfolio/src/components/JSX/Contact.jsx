@@ -14,10 +14,16 @@ export default function Contact() {
 
     const onSubmit = async (event) => {
     event.preventDefault();
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+      setResult("Please complete the reCAPTCHA challenge");
+      return;
+    }
     setResult("Sending....");
     const formData = new FormData(event.target);
  
     formData.append("access_key", "14eec43c-6ba6-4e1d-b291-337da78a53bd");
+    formData.append("g-recaptcha-response", recaptchaResponse);
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -29,6 +35,7 @@ export default function Contact() {
     if (data.success) {
       setResult("Email sent successfully");
       event.target.reset();
+      grecaptcha.reset(); // Reset reCAPTCHA after successful submission
     } else {
       console.log("Error", data);
       setResult(data.message);
@@ -63,6 +70,7 @@ export default function Contact() {
                 <input type="email" placeholder='Enter your email' name="email" required />
                 <label htmlFor="message" className='text'>Message</label>
                 <textarea id="message" placeholder='Write your message here' name="message" rows="7" required></textarea>
+                <div className="g-recaptcha" data-sitekey="6LdvF_YpAAAAAG2dFmMJir4MAsYweuOhwjShuLdb"></div>
                 <button type="submit" className="contact-button resume-btn">Send Message</button>
             </form>
             <span>{result}</span>
