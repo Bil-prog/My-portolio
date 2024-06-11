@@ -4,7 +4,7 @@ import React from 'react';
 import '../CSS/Projects.css';
 import ecommerceImage from '../../assets/ecommerce.png';
 import ngoImage from '../../assets/ngo.webp';
-import gymImage from '../../assets/gym.jpg';
+import gymImage from '../../assets/gym-png.png';
 
 const projects = [
   {
