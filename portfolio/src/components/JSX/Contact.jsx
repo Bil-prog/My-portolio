@@ -1,30 +1,32 @@
 /* eslint-disable react/no-unescaped-entities */
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React, { useState } from 'react';
 import '../CSS/Contact.css'
+import Hcaptcha from '@hcaptcha/react-hcaptcha';
 import { useDarkMode } from '../JSX/DarkModeContext'
 import linkedin from '../../assets/linkedin-svg-sq.svg'
 import email from '../../assets/email-svg.svg'
 import linkedinDark from '../../assets/linkedin-dark.png'
 import emailDark from '../../assets/mail-dark.png'
 
+
 export default function Contact() { 
     const { darkMode } = useDarkMode();
-    const [result, setResult] = React.useState("");
-    const recaptchaRef = React.createRef();
+    const [result, setResult] = useState("");
+    const [hcaptchaToken, setHcaptchaToken] = useState('');
 
     const onSubmit = async (event) => {
     event.preventDefault();
 
-    const recaptchaResponse = recaptchaRef.current.getValue();
-    if (!recaptchaResponse) {
-      setResult("Please complete the reCAPTCHA challenge");
+    if (!hcaptchaToken) {
+      setResult("Please complete the hCaptcha challenge");
       return;
     }
+    
     setResult("Sending....");
     const formData = new FormData(event.target);
     formData.append("access_key", "14eec43c-6ba6-4e1d-b291-337da78a53bd");
-    formData.append("g-recaptcha-response", recaptchaResponse);
+    formData.append("hcaptcha", hcaptchaToken);
 
     try{
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -37,13 +39,9 @@ export default function Contact() {
       if (data.success) {
         setResult("Email sent successfully");
         event.target.reset();
-        // Reset reCAPTCHA after successful submission
-        if (recaptchaRef.current) {
-          recaptchaRef.current.reset();
-        }
       } else {
         console.log("Error", data);
-        setResult(data.message);
+        setResult(data.message || 'Failed to send email');
       }
     } 
     catch (error){
@@ -70,7 +68,7 @@ export default function Contact() {
                             My LinkedIn
                         </a>
                     </div>
-                </div>
+                </div> 
             </div>
             <form className="contact-right" onSubmit={onSubmit}>
                 <input type="hidden" name="access_key" value="14eec43c-6ba6-4e1d-b291-337da78a53bd"></input>
@@ -80,17 +78,14 @@ export default function Contact() {
                 <input type="email" placeholder='Enter your email' name="email" required />
                 <label htmlFor="message" className='text'>Message</label>
                 <textarea id="message" placeholder='Write your message here' name="message" rows="7" required></textarea>
-                <div className="g-recaptcha"
-                    ref={recaptchaRef} 
-                    data-sitekey="6LdvF_YpAAAAAG2dFmMJir4MAsYweuOhwjShuLdb"
-                    data-theme="light"
-                    data-size="normal"
-                    data-badge="inline"
-                    ></div>
+                <Hcaptcha 
+                    sitekey="8a04f140-f98c-47f6-9f74-cfa26be28214"
+                    onVerify={(token) => setHcaptchaToken(token)}
+                />
                 <button type="submit" className="contact-button resume-btn">Send Message</button>
             </form>
-            <span>{result}</span>
         </div>
+        <span className='text'>{result}</span>
     </div>
   )
 }

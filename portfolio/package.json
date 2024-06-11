@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@hcaptcha/react-hcaptcha": "^1.10.1",
     "@heroicons/react": "^1.0.6",
     "ionicons": "^7.4.0",
     "react": "^18.2.0",

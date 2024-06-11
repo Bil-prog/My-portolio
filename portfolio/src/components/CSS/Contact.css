@@ -9,6 +9,7 @@
 .contact-section{
     display: flex;
     gap: 10rem;
+    align-items: flex-start; 
 }
 .contact-title{
     font-size: 2rem;
