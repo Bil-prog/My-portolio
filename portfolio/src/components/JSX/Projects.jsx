@@ -23,7 +23,7 @@ const projects = [
     title: "Gym App",
     imgSrc: gymImage,
     githubLink: "https://github.com/Bil-prog/Gym-app",
-    liveDemoLink: "https://gym-r7e2nwffn-bilhas-projects.vercel.app/"
+    liveDemoLink: "https://gym-app-rho-two.vercel.app/"
   }
 ];
 
