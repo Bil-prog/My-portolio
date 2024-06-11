@@ -11,34 +11,44 @@ import emailDark from '../../assets/mail-dark.png'
 export default function Contact() { 
     const { darkMode } = useDarkMode();
     const [result, setResult] = React.useState("");
+    const recaptchaRef = React.createRef();
 
     const onSubmit = async (event) => {
     event.preventDefault();
-    const recaptchaResponse = grecaptcha.getResponse();
+
+    const recaptchaResponse = recaptchaRef.current.getValue();
     if (!recaptchaResponse) {
       setResult("Please complete the reCAPTCHA challenge");
       return;
     }
     setResult("Sending....");
     const formData = new FormData(event.target);
- 
     formData.append("access_key", "14eec43c-6ba6-4e1d-b291-337da78a53bd");
     formData.append("g-recaptcha-response", recaptchaResponse);
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
+    try{
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (data.success) {
-      setResult("Email sent successfully");
-      event.target.reset();
-      grecaptcha.reset(); // Reset reCAPTCHA after successful submission
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
+      if (data.success) {
+        setResult("Email sent successfully");
+        event.target.reset();
+        // Reset reCAPTCHA after successful submission
+        if (recaptchaRef.current) {
+          recaptchaRef.current.reset();
+        }
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+      }
+    } 
+    catch (error){
+      console.error('Error', error);
+      setResult('An error occurred while sending the email');
     }
   };
   return (
@@ -48,7 +58,7 @@ export default function Contact() {
             <div className="contact-left">
                 <h3 className='hero-title contact-title'>Let's talk</h3>
                 <p className='text'>I'd love to hear from you!</p>
-                <p className='text'> Whether you have a question or just want to say hi, feel free to reach out.</p>
+                <p className='text'>Whether you have a question or just want to say hi, feel free to reach out.</p>
                 <div className="contact-details">
                     <div className="contact-detail">
                         <img src={darkMode ? emailDark : email} alt="" className='contact-icon'/>
@@ -70,7 +80,13 @@ export default function Contact() {
                 <input type="email" placeholder='Enter your email' name="email" required />
                 <label htmlFor="message" className='text'>Message</label>
                 <textarea id="message" placeholder='Write your message here' name="message" rows="7" required></textarea>
-                <div className="g-recaptcha" data-sitekey="6LdvF_YpAAAAAG2dFmMJir4MAsYweuOhwjShuLdb"></div>
+                <div className="g-recaptcha"
+                    ref={recaptchaRef} 
+                    data-sitekey="6LdvF_YpAAAAAG2dFmMJir4MAsYweuOhwjShuLdb"
+                    data-theme="light"
+                    data-size="normal"
+                    data-badge="inline"
+                    ></div>
                 <button type="submit" className="contact-button resume-btn">Send Message</button>
             </form>
             <span>{result}</span>
