@@ -20,9 +20,10 @@ const skills = [
     category: "Cybersecurity",
     details: [
       { name: "Malware Analysis", level: "Intermediate" },
-      { name: "Digital Forensics", level: "Intermediate" },
-      { name: "Penetration Testing", level: "Intermediate" },
-      { name: "Computer Networks", level: "Intermediate" }
+      { name: "Vulnerability Assessment", level: "Intermediate" },
+      { name: "Risk Management", level: "Intermediate" },
+      { name: "Network security", level: "Intermediate" },
+      { name: "Incidence Response", level: "Intermeddiate"}
     ]
   }
 ];

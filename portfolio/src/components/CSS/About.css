@@ -52,3 +52,8 @@
         display: none;
     }
 }
+@media screen and (max-width: 413px) {
+    .about{
+        margin-bottom: 12rem;
+    }
+}

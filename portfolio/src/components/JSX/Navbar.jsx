@@ -12,7 +12,7 @@ import closeMenuIconDark from '../../assets/close-menu-dark.png'
 
 export default function Navbar() {
   const [activeIndex, setActiveIndex] = useState(null);
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false); 
   const [menuOpen, setMenuOpen] = useState(false);
   //const [darkMode, setDarkMode] = useState(false);
   const { darkMode, toggleDarkMode } = useDarkMode();

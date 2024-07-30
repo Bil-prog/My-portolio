@@ -14,7 +14,7 @@ export default function About() {
             <div className="text-container">
                 <h1 className="title">About Me</h1>
                     <p className='abt-description text txt'>
-                        With a background spanning web development, data analysis and cybersecurity, I bring a diverse skill set tailored to meet the evolving demands of the digital landscape. I specialize in crafting visually appealing and user-centric interfaces while ensuring seamless functionality. My expertise in cybersecurity encompasses reconnaissance, vulnerability analysis, and penetration testing, contributing to robust threat mitigation strategies. I am driven by a passion for innovation and continuous learning, and I am excited to leverage my skills to make meaningful contributions in the ever-evolving world of technology. 
+                    Cybersecurity analyst with comprehensive training and hands-on experience in ethical hacking, threat detection, and incident response. Proven ability to identify and mitigate security risks, backed by practical experience in real-world scenarios. Highly motivated to contribute to securing digital infrastructures and enhancing cybersecurity measures. I am also a skilled frontend developer with expertise in React JS, blending development and security skills to create secure applications. I am driven by a passion for innovation and continuous learning, and I am excited to leverage my skills to make meaningful contributions in the ever-evolving world of technology. 
                     </p>
             </div>
             <div className="timeline">

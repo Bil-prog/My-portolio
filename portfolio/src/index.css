@@ -42,7 +42,7 @@ body{
 
 }
 .title {
-    font-size: 3rem;
+    font-size: 3rem; 
     color: var(--title-color);
 }
 .text{

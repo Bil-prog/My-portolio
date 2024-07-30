@@ -22,7 +22,7 @@ export const DarkModeProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    if (darkMode) {
+    if (darkMode) { 
       document.body.classList.add('dark-mode');
     } else {
       document.body.classList.remove('dark-mode');
