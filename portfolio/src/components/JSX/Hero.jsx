@@ -21,7 +21,7 @@ export default function Hero() {
         <img className="hero-img" src={profileimg} alt="picture of me"/>
         <p className='text'>Hello, I'm</p>
         <h4 className='hero-title'>Bilha Mwengi</h4>
-        <p className='tag-line text'>Cybersecurity Analyst</p>
+        <p className='tag-line text'>A web developer with cybersecurity expertise</p>
         <button className='resume-btn' onClick={handleDownload}>My Resume</button>
         <div className="socials">
             <img src={darkMode ? linkedinDark : linkedin} alt="linkedin" onClick={() => window.open('https://www.linkedin.com/in/bilha-mwengi/', "_blank", "noopener,noreferrer")}/>
