@@ -13,11 +13,8 @@ export default function About() {
         <div className="details-abt-container">
             <div className="text-container">
                 <h1 className="title">About Me</h1>
-                    {/* <p className='abt-description text txt'>
-                    Cybersecurity analyst with comprehensive training and hands-on experience in ethical hacking, threat detection, and incident response. Proven ability to identify and mitigate security risks, backed by practical experience in real-world scenarios. Highly motivated to contribute to securing digital infrastructures and enhancing cybersecurity measures. I am also a skilled frontend developer with expertise in React JS, blending development and security skills to create secure applications. I am driven by a passion for innovation and continuous learning, and I am excited to leverage my skills to make meaningful contributions in the ever-evolving world of technology. 
-                    </p> */}
                     <p className='abt-description text txt'>
-                    Skilled frontend developer with expertise in React JS, blending development and security skills to create secure applications. I have hands-on experience with Server-Side Rendering (SSR), Static Site Generation (SSG), and Client-Side Rendering (CSR), as well as asynchronous request handling, partial page updates, and AJAX. I am skilled in addressing cross-browser compatibility issues and proficient in using Git for version control. I am driven by a passion for innovation and continuous learning, and I am excited to leverage my skills to make meaningful contributions in the ever-evolving world of technology. 
+                    Experienced Frontend Developer proficient in building responsive and user-friendly web applications using React JS while adhering to best practices in modern web development. Also, a cybersecurity analyst with comprehensive training and hands-on experience in ethical hacking, threat detection, and incident response, blending development and security skills to create secure applications.
                     </p>
             </div>
             <div className="timeline">
