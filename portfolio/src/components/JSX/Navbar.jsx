@@ -14,7 +14,6 @@ export default function Navbar() {
   const [activeIndex, setActiveIndex] = useState(null);
   const [scrolled, setScrolled] = useState(false); 
   const [menuOpen, setMenuOpen] = useState(false);
-  //const [darkMode, setDarkMode] = useState(false);
   const { darkMode, toggleDarkMode } = useDarkMode();
 
   const handleNavClick = (index, sectionId) => {
@@ -23,13 +22,7 @@ export default function Navbar() {
     closeMenu();
   };
 
-  // const handleContactClick = () => {
-  //   setActiveIndex(null);
-  //   document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-  //   closeMenu();
-  // };
-
-  const toggleMenu = () => {
+   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
