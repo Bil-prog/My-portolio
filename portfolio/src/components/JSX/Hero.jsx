@@ -6,7 +6,7 @@ import { useDarkMode } from '../JSX/DarkModeContext'
 import profileimg from '../../assets/profile-picc.png'
 import linkedin from '../../assets/linkedin-svg.svg'
 import github from '../../assets/github-svg.svg'
-import resume from '../../assets/Bilha-Mwengi-Resume.pdf'
+import resume from '../../assets/Bilha-Mwengi-Resume-.pdf'
 import linkedinDark from '../../assets/linkedin-dark-rounded.png';
 import githubDark from '../../assets/github-dark.png';
 

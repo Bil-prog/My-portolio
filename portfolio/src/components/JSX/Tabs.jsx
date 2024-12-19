@@ -11,6 +11,7 @@ const tabs = [
   )},
   { name: 'experience', label: 'Experience', content: (
     <ul>
+      <li><span> - Apr 2024 - Present</span><br />Freelance Web Developer</li>
       <li><span> - Jan 2024 - Apr 2024</span><br />Technical Intern - Communications Authority</li>
       <li><span> - Oct 2023 - Nov 2023</span><br />Cybersecurity Intern - Senselearner Technologies</li>
       <li><span> - Jan 2020 - Sep 2021</span><br />Frontend Developer - Finetek Labs</li>
