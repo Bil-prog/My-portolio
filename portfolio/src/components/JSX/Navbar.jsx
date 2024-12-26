@@ -56,7 +56,7 @@ export default function Navbar() {
         
         
         <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
-          {['Home', 'About', 'Expertise', 'Projects', 'Contact'].map((item, index) => (
+          {['About', 'Expertise', 'Projects', 'Contact'].map((item, index) => (
             <li
               key={index}
               className={`text ${activeIndex === index ? 'active' : ''}`}
