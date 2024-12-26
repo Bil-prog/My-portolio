@@ -1,11 +1,12 @@
 .about{
-    padding-top: 4vh;
-    height: 96vh;
-    box-sizing: border-box;
-    min-height: fit-content;
-    position: relative;
-    margin-top: 8rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-top: 4rem;
+    gap: 2rem;
 }
 .abt-pic-container{
     margin: 12px;
@@ -16,7 +17,7 @@
     height: 400px;
     width: 400px;
     object-fit: contain;
-    border-radius: 20%;
+    border-radius: 5rem;
 }
 .abt-description{
     font-size: 17px;
@@ -26,34 +27,31 @@
     margin-bottom: 1rem;
     margin-top: 2rem;
 }
-@media screen and (max-width: 1400px){
-    .about{
-        height: fit-content;
-        margin: 6% 0% 5% 5%;
-        height: 80vh;
-    }
-}
-@media screen and (max-width: 900px) {
+@media (max-width: 768px){
     .about{
         flex-direction: column;
+        align-items: center;
     }
     .abt-pic-container{
-        
-        display: none;
+        margin: 0;
+    }
+    .abt-pic{
+        height: 300px;
+        width: 300px;
     }
 }
-@media screen and (max-width: 600px) {
+@media (max-width: 425px){
     .about{
-        height: 70vh;
-        margin-bottom: 9rem;
-        padding: 2%;
+        margin-top: 1.5rem;
+        padding: 0 0.5rem;
     }
     .abt-pic-container{
         display: none;
     }
-}
-@media screen and (max-width: 413px) {
-    .about{
-        margin-bottom: 12rem;
+    .details-abt-container .title{
+        font-size: 1.9rem;
+    }
+    .details-abt-container .abt-description{
+        font-size: 15px;
     }
 }

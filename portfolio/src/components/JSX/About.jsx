@@ -12,7 +12,7 @@ export default function About() {
         </div>
         <div className="details-abt-container">
             <div className="text-container">
-                <h1 className="title">About Me</h1>
+                <h1 className="title">About Me</h1> 
                     <p className='abt-description text txt'>
                     Experienced Frontend Developer proficient in building responsive and user-friendly web applications using React JS while adhering to best practices in modern web development. Also, a cybersecurity analyst with comprehensive training and hands-on experience in ethical hacking, threat detection, and incident response, blending development and security skills to create secure applications.
                     </p>

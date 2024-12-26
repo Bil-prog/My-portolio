@@ -56,7 +56,7 @@ export default function Contact() {
             <div className="contact-left">
                 <h3 className='hero-title contact-title'>Let's talk</h3>
                 <p className='text'>I'd love to hear from you!</p>
-                <p className='text'>Whether you have a question or just want to say hi, feel free to reach out.</p>
+                <p className='text'>Whether you'd like to collaborate or just want to say hi, feel free to reach out.</p>
                 <div className="contact-details">
                     <div className="contact-detail">
                         <img src={darkMode ? emailDark : email} alt="" className='contact-icon'/>
@@ -65,7 +65,7 @@ export default function Contact() {
                     <div className="contact-detail">
                         <img src={darkMode ? linkedinDark : linkedin} alt="" className='contact-icon' />
                         <a href="https://www.linkedin.com/in/bilha-mwengi/" target="_blank" rel="noopener noreferrer" className="contact-link text">
-                            My LinkedIn
+                          linkedin.com/in/bilha-mwengi/
                         </a>
                     </div>
                 </div> 
