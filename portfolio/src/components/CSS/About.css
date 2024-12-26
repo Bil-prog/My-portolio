@@ -43,10 +43,12 @@
 @media (max-width: 425px){
     .about{
         margin-top: 1.5rem;
-        padding: 0 0.5rem;
     }
     .abt-pic-container{
         display: none;
+    }
+    .details-abt-container{
+        padding: 0 0.5rem;
     }
     .details-abt-container .title{
         font-size: 1.9rem;
