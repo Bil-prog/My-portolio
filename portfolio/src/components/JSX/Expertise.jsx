@@ -7,23 +7,25 @@ import approval from '../../assets/approval-png.png'
  
 const skills = [
   {
-    category: "Web Development",
+    category: "Languages & Frameworks",
     details: [
       { name: "HTML", level: "Experienced" },
       { name: "CSS", level: "Experienced" },
-      { name: "Javascript", level: "Intermediate" },
-      { name: "Vue JS", level: "Intermediate" },
-      { name: "React JS", level: "Intermediate" }
+      { name: "Javascript", level: "Experienced" },
+      { name: "React JS", level: "Experienced" },
+      { name: "Next.JS", level: "Intermediate" },
+      { name: "TypeScript", level: "Intermediate" },
     ]
   },
   {
-    category: "Cybersecurity",
+    category: "Tools & Technologies",
     details: [
-      { name: "Malware Analysis", level: "Intermediate" },
-      { name: "Vulnerability Assessment", level: "Intermediate" },
-      { name: "Risk Management", level: "Intermediate" },
-      { name: "Network security", level: "Intermediate" },
-      { name: "Incidence Response", level: "Intermeddiate"}
+      { name: "Git, Github", level: "Experienced" },
+      { name: "RESTful APIs", level: "Intermediate" },
+      { name: "Jest", level: "Beginner" },
+      { name: "AWS", level: "Intermediate" },
+      { name: "Firebase", level: "Intermediate" },
+      { name: "Responsive Design", level: "Experienced" },
     ]
   }
 ];

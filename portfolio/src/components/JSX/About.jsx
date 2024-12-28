@@ -21,6 +21,6 @@ export default function About() {
                 <Tabs />
             </div>
         </div>
-    </div>
+    </div> 
   )
 }
